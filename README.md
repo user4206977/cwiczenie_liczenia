@@ -21,7 +21,7 @@ Aplikacja desktopowa stworzona w C# i WPF, służąca do ćwiczenia podstawowych
 
 1. Sklonuj repozytorium:
    ```bash
-   git clone https://github.com/TwojaNazwaUzytkownika/MathPracticeApp.git
+   git clone https://github.com/user4206977/cwiczenie_liczenia.git
 
 2. Otwórz projekt w Visual Studio.
 3. Zbuduj projekt (`Build > Build Solution`).
