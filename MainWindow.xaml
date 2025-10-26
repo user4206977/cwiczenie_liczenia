@@ -1,0 +1,154 @@
+﻿<Window x:Class="matematyka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:matematyka"
+        mc:Ignorable="d"
+        Title="Ćwiczymy liczenie" Height="356" Width="918" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Background="#ffdadada" Foreground="Black" Content="DODAJEMY LICZBY" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" x:Name="Banner"  FontWeight="Bold"/>
+
+        <Label
+            x:Name="FirstNum"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="1"
+            FontSize="25"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="0"
+            Foreground="Black"
+            BorderThickness="1"
+            BorderBrush="LightGray"
+            FontWeight="Bold"/>
+        <Label
+            Grid.Row="3"
+            Grid.Column="2"
+            FontSize="25"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="+"
+            x:Name="znak"
+            Foreground="Black"/>
+        <Label
+            x:Name="SecondNum"
+            Grid.Row="3"
+            Grid.Column="3"
+            Margin="1"
+            FontSize="25"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="0"
+            Foreground="Black"
+            BorderThickness="1"
+            BorderBrush="LightGray"
+            FontWeight="Bold"/>
+        <Label
+            Grid.Row="3"
+            Grid.Column="4"
+            FontSize="35"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="="
+            Foreground="Black"/>
+        <TextBox
+            x:Name="AnswerBox"
+            Grid.Row="3"
+            Grid.Column="5"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Margin="1"
+            Text=""
+            FontSize="25"
+            Foreground="Black"
+            BorderThickness="1"
+            BorderBrush="LightGray" GotMouseCapture="AnswerBox_GotMouseCapture"
+            FontWeight="Bold"/>
+
+        <Button
+            x:Name="spr"
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            BorderThickness="1"
+            BorderBrush="LightGray"
+            FontSize="25"
+            Content="Sprawdź"
+            Margin="1" Click="Check"/>
+        <Button
+            x:Name="los"
+            Grid.Row="5"
+            Grid.Column="4"
+            Grid.ColumnSpan="2"
+            BorderThickness="1"
+            BorderBrush="LightGray"
+            FontSize="25"
+            Content="Losuj"
+            Margin="1" Click="SelectNum"/>
+
+        <Label
+            x:Name="Result"
+            Grid.Row="7"
+            Grid.Column="1"
+            Grid.ColumnSpan="5"
+            Margin="1"
+            FontSize="25"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="WPISZ POPRAWNY WYNIK!"
+            Foreground="Black"
+            FontWeight="Bold"/>
+
+        <GroupBox Grid.Row="1" Grid.Column="7" Grid.RowSpan="3" Header="Rodzaj działania" BorderThickness="2">
+            <StackPanel VerticalAlignment="Center" >
+                <RadioButton Margin="3" x:Name="Add" Checked="Add_Checked">Dodawanie</RadioButton>
+                <RadioButton Margin="3" x:Name="Sub" Checked="Sub_Checked">Odejmowanie</RadioButton>
+                <RadioButton Margin="3" x:Name="Div" Checked="Div_Checked">Dzielenie</RadioButton>
+                <RadioButton Margin="3" x:Name="Mul" Checked="Mul_Checked">Mnożenie</RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="9" Grid.RowSpan="3" Header="Zakres Liczbowy" BorderThickness="2">
+            <StackPanel VerticalAlignment="Center" >
+                <RadioButton Margin="3" x:Name="One">1-10</RadioButton>
+                <RadioButton Margin="3" x:Name="Two">1-20</RadioButton>
+                <RadioButton Margin="3" x:Name="Three">1-30</RadioButton>
+                <RadioButton Margin="3" x:Name="Four">1-40</RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="7" Grid.RowSpan="3" Header="Wyniki" BorderThickness="2">
+            <StackPanel VerticalAlignment="Center" >
+                <Label x:Name="il_zad" Content="Ilość zadań: 0"/>
+                <Label x:Name="il_pop" Content="Odpowiedzi Poprawnych: 0"/>
+                <Label x:Name="il_nie" Content="Odpowiedzi Błędnych: 0"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
