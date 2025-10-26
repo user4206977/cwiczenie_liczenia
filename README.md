@@ -41,6 +41,8 @@ Aplikacja desktopowa stworzona w C# i WPF, służąca do ćwiczenia podstawowych
 
 Wykonano Styczeń 2025.
 
+> ⚠️ **UWAGA:** Aplikacja została skompilowana w Visual Studio 2026.
+
 ## Licencja
 
 Projekt dostępny na licencji MIT.
