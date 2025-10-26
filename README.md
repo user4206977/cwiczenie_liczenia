@@ -38,6 +38,7 @@ Aplikacja desktopowa stworzona w C# i WPF, służąca do ćwiczenia podstawowych
 ## Autor
 
 * Maciej Strzelec
+* Filip Ryguła
 
 Wykonano Styczeń 2025.
 
